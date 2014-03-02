@@ -2,6 +2,8 @@ package net.robstokes.demo.oldtricks
 
 import net.robstokes.demo.oldtricks.ExtensionMethods.TraversablePimpSauce
 
+//see: http://stackoverflow.com/questions/8104846/chart-of-ienumerable-linq-equivalents-in-scala
+
 class LinqAnalogies {
   val xs : List[Int] = List(1, 2, 3, 4, 5, 6, 7)
   val ys = List(6, 7)
@@ -9,7 +11,7 @@ class LinqAnalogies {
 
   def examples() : Unit = {
     xs.map(f => f.toString)                           //xs.Select(i => i.ToString())
-    xxs.flatMap(f => f.toString)                      //xxs.SelectMany(i => i.ToString())
+    xxs.flatMap(f => f.toString())                      //xxs.SelectMany(i => i.ToString())
     xs.filter(f => f > 3)                             //xs.Where(f => f > 3)
 
     xs.reduceLeft((a, b) => a + b)                    //xs.Aggregate((a, b) => a + b)

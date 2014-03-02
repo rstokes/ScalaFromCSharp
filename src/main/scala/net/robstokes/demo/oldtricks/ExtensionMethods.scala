@@ -11,19 +11,17 @@ object ExtensionMethods {
     }
 
     //not in the std lib
-    def single[A](xs: Traversable[A]): A = {
-      if(xs.isEmpty) throw new IllegalArgumentException("Empty sequence!")
-      else if(xs.size > 1) throw new IllegalArgumentException("More than one elements!")
-      else xs.head
+    def single[T](): A = {
+      if(collection.isEmpty) throw new IllegalArgumentException("Empty sequence!")
+      if (collection.size > 1) throw new IllegalArgumentException("More than one element!")
+      collection.head
     }
 
-    def join[B, K, R](inner: Traversable[B])
-                        (outKey: A => K, inKey: B => K, f: (A, B) => R): Traversable[R] = {
+    def join[B, K, R](inner: Traversable[B])(outKey: A => K, inKey: B => K, f: (A, B) => R): Traversable[R] = {
       for(o <- collection; i <- inner; if outKey(o) == inKey(i)) yield f(o, i)
     }
 
-    def groupJoin[B, K, R](inner: Traversable[B])
-                             (outKey: A => K, inKey: B => K, f: (A, Traversable[B]) => R): Traversable[R] = {
+    def groupJoin[B, K, R](inner: Traversable[B])(outKey: A => K, inKey: B => K, f: (A, Traversable[B]) => R): Traversable[R] = {
       for(o <- collection) yield {
         val zs = for(i <- inner; if outKey(o) == inKey(i)) yield i
         f(o, zs)
