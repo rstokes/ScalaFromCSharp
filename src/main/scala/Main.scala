@@ -6,6 +6,6 @@ import net.robstokes.demo.oldtricks.Generics
 
 object Main {
   def main(args: Array[String]){
-    println("test")
+    println("hello world")
   }
 }

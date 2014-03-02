@@ -4,7 +4,7 @@ package net.robstokes.demo.oldtricks
 // reference: http://alvinalexander.com/scala/scala-2.10-implicit-class-example
 
 object ExtensionMethods {
-  implicit class TraversablePimpSauce[A](val collection : Traversable[A]){
+  implicit class TraversableExtensions[A](val collection : Traversable[A]){
 
     def select[B](func: A => B) : Traversable[B] = {
       for(a <- collection) yield func(a)

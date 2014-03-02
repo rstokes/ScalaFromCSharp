@@ -1,6 +1,6 @@
 package net.robstokes.demo.oldtricks
 
-import net.robstokes.demo.oldtricks.ExtensionMethods.TraversablePimpSauce
+import net.robstokes.demo.oldtricks.ExtensionMethods.TraversableExtensions
 
 //see: http://stackoverflow.com/questions/8104846/chart-of-ienumerable-linq-equivalents-in-scala
 
@@ -11,7 +11,7 @@ class LinqAnalogies {
 
   def examples() : Unit = {
     xs.map(f => f.toString)                           //xs.Select(i => i.ToString())
-    xxs.flatMap(f => f.toString())                      //xxs.SelectMany(i => i.ToString())
+    xxs.flatMap(f => f.toString())                     //xxs.SelectMany(i => i.ToString())
     xs.filter(f => f > 3)                             //xs.Where(f => f > 3)
 
     xs.reduceLeft((a, b) => a + b)                    //xs.Aggregate((a, b) => a + b)
@@ -39,7 +39,7 @@ class LinqAnalogies {
     xs.size                                           //xs.Count()
     xs.count(_ > 3)                                   //xs.count(a => a > 3)
 
-    xs.groupBy(a => if(a%2 == 0) true else false)     //xs.GroupBy(a => a%2 == 0 ? true : false)
+    xs.groupBy(a => if(a%2 == 0) true else false)     //xs.GroupBy(a => a.Modulo(2) == 0 ? true : false)
 
     xs.max                                            //xs.Max()
     xs.maxBy(_ * 2)                                   //xs.Max(a => a * 2)
