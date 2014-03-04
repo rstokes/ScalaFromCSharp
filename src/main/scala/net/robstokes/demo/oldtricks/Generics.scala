@@ -1,10 +1,13 @@
 package net.robstokes.demo.oldtricks
 
-class Generics {
+//reference: http://twitter.github.io/scala_school/type-basics.html
 
+class Generics {
+  def getTweet : (Bird => String) = (a: Animal) => a.sound
 }
 
-class SuperStack[T] {
+//invariance
+class InvariantStack[T]{
   var elems: List[T] = Nil
   def push(x: T) { elems = x :: elems }
   def top: T = elems.head
@@ -14,3 +17,22 @@ class SuperStack[T] {
     result
   }
 }
+
+//covariance
+class Covarient[+A]
+
+//contravariant
+class Animal{ val sound = "rustle" }
+class Bird extends Animal { override val sound = "cluck" }
+
+
+
+trait Function1 [-T1, +R] extends AnyRef
+
+
+/******* Bounds *******/
+
+
+
+
+
