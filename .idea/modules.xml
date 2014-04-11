@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaFromCSharp.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaFromCSharp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaFromCSharp-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaFromCSharp-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalafromcsharp.iml" filepath="$PROJECT_DIR$/.idea/modules/scalafromcsharp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalafromcsharp-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalafromcsharp-build.iml" />
     </modules>
   </component>
 </project>
