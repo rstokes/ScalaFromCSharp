@@ -10,7 +10,7 @@ class CommonInterfaces {
 }
 
 //IComparable ~ Ordered
-class MyComparable(val a: Int) extends Ordered[MyComparable]{
+case class MyComparable(val a: Int) extends Ordered[MyComparable]{
   override def compare(that: MyComparable): Int = {
     this.a - that.a
   }
@@ -18,7 +18,7 @@ class MyComparable(val a: Int) extends Ordered[MyComparable]{
 
 //IComparer ~ Ordering
 case class Person(name: String, age: Int)
-class MyComparer extends Ordering[Person]{
+object MyComparer extends Ordering[Person]{
   override def compare(x: Person, y: Person): Int = {
     x.age compare y.age
   }
