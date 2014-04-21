@@ -11,7 +11,7 @@ class LinqAnalogies {
 
   def examples() : Unit = {
     xs.map(f => f.toString)                           //xs.Select(i => i.ToString())
-    xxs.flatMap(f => f.toString())                     //xxs.SelectMany(i => i.ToString())
+    xxs.flatMap(f => f.toString())                    //xxs.SelectMany(i => i.ToString())
     xs.filter(f => f > 3)                             //xs.Where(f => f > 3)
 
     xs.reduceLeft((a, b) => a + b)                    //xs.Aggregate((a, b) => a + b)
