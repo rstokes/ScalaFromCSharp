@@ -1,5 +1,9 @@
 package net.robstokes.demo.oldtricks
 
+//references
+//http://www.scala-lang.org/api/2.10.4/index.html#scala.math.Ordering
+
+
 class CommonInterfaces {
 
 
@@ -8,6 +12,14 @@ class CommonInterfaces {
 //IComparable ~ Ordered
 class MyComparable(val a: Int) extends Ordered[MyComparable]{
   override def compare(that: MyComparable): Int = {
-    this.a - that.a;
+    this.a - that.a
+  }
+}
+
+//IComparer ~ Ordering
+case class Person(name: String, age: Int)
+class MyComparer extends Ordering[Person]{
+  override def compare(x: Person, y: Person): Int = {
+    x.age compare y.age
   }
 }
