@@ -1,20 +1,48 @@
 //syllabus
+//main
 import net.robstokes.demo.oldtricks.Tuples
 import net.robstokes.demo.oldtricks.LinqAnalogies
 import net.robstokes.demo.oldtricks.ExtensionMethods
 import net.robstokes.demo.oldtricks.Generics
 import net.robstokes.demo.oldtricks.CommonInterfaces
+//worksheet
+//repl
 
 import net.robstokes.demo.newtricks.Traits
+//import net.robstokes.demo.newtricks.CaseClasses
+import net.robstokes.demo.newtricks.PatternMatching
 
 //unit tests
 
 //references
 //http://stackoverflow.com/questions/1755345/scala-difference-between-object-and-class
+//http://twitter.github.io/scala_school
+
+
+/* Why Scala?
+Expressive
+  -First-class functions
+  -Closures
+Concise
+  -Type inference
+  -Literal syntax for function creation
+Java interoperability
+  -Can reuse java libraries
+  -Can reuse java tools
+  -No performance penalty
+ */
+
+/* How Scala?
+Compiles to java bytecode
+Works with any standard JVM
+  -Or even some non-standard JVMs like Dalvik
+  -Scala compiler written by author of Java compiler
+ */
 
 
 
-object Main { // object is shorthand for a singleton,
+
+object Main { // object is shorthand for a singleton, often used as factories
   def main(args: Array[String]){  // no equals is shorthand for : Unit. This is similar to void
     println("hello world")
     val instance = new MyClass(1)
@@ -22,7 +50,13 @@ object Main { // object is shorthand for a singleton,
   }
 }
 
+//no constructor overloading
 class MyClass(val a: Int){
+
+  val b : Int = {
+    //some stuff to evaluate at construction
+    10
+  }
 
   def basics() : Int = { //optional return type
     val a = 1; // semicolons are optional
