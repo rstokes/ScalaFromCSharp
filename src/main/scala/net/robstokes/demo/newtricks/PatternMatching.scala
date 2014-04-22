@@ -5,7 +5,6 @@ package net.robstokes.demo.newtricks
 class PatternMatching {
   //matching on values
   val times = 1
-  val str = "x"
 
   times match { // looks a lot like a switch case
     case 1 => "one"

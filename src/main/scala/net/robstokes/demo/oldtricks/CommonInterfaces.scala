@@ -23,3 +23,7 @@ object MyComparer extends Ordering[Person]{
     x.age compare y.age
   }
 }
+
+//Observable
+//Observer
+//blocking queues

@@ -13,8 +13,12 @@ package net.robstokes.demo.newtricks
 trait Person{
   val id: Int
   val name: String
+  val comapny = List(Company("HCA"), Company("HPG"))
+  def sayMyName() = {
+    println(name)
+  }
 }
 
 case class Company(name: String)
 case class Employee(id: Int, name: String, company: Company) extends Person
-case class Vendor(id: Int, name:String, company: Company) extends Person
+case class Vendor(id: Int, name:String, company: Company)

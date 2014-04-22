@@ -2,12 +2,17 @@ package net.robstokes.demo.oldtricks
 
 // Pimp My Library Pattern
 // reference: http://alvinalexander.com/scala/scala-2.10-implicit-class-example
+// http://docs.scala-lang.org/overviews/core/implicit-classes.html
+// http://stackoverflow.com/questions/1052476/what-is-scalas-yield
 
 object ExtensionMethods {
-  implicit class TraversableExtensions[A](val collection : Traversable[A]){
-
+  implicit class TraversableExtensions[A](val collection : Traversable[A]){ //makes the class’ primary constructor available for implicit conversions
+                                                                            // when the class is in scope.  They must be inside a class, trait or object
+                                                                            // and may only take one implicit argument in it's constructor.  Introduced in 2.10
     def select[B](func: A => B) : Traversable[B] = {
       for(a <- collection) yield func(a)
+      //compiles to
+      //collection.map(a => func(a))
     }
 
     //not in the std lib

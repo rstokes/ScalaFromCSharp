@@ -28,6 +28,8 @@ class Generics {
     biophony(Seq(new Chicken, new Bird))
 
     //List[B].::[B >: T](x: B)
+    val listOfBirds = List(new Bird)
+    val listOfAnimal = new Animal :: listOfBirds
     val flock : List[Bird] = List(new Bird, new Bird)
     val flock1 : List[Bird] =  new Chicken :: flock
     val flock2 : List[Animal] = new Animal :: flock

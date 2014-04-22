@@ -8,12 +8,12 @@ class Tuples {
   val c : (Int, String, List[Int]) = new Tuple3(1, "3", List(3, 4))
   val d : Tuple3[Int, String, List[Int]] = new Tuple3[Int, String, List[Int]](1, "3", List(3, 4)) //C#
 
-  def fun() = {
-    val (a, b, c) = returnTuple()
+  def fun() : String = {
+    val (a, b, c) = createTuple()
     b
   }
 
-  def returnTuple() : (Int, String, List[Int]) = {
+  def createTuple() : (Int, String, List[Int]) = {
     (1, "3", List(3,4))  //return is optional in most cases
   }
 }

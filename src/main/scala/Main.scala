@@ -12,8 +12,6 @@ import net.robstokes.demo.newtricks.Traits
 //import net.robstokes.demo.newtricks.CaseClasses
 import net.robstokes.demo.newtricks.PatternMatching
 
-//unit tests
-
 //references
 //http://stackoverflow.com/questions/1755345/scala-difference-between-object-and-class
 //http://twitter.github.io/scala_school
@@ -40,8 +38,6 @@ Works with any standard JVM
  */
 
 
-
-
 object Main { // object is shorthand for a singleton, often used as factories
   def main(args: Array[String]){  // no equals is shorthand for : Unit. This is similar to void
     println("hello world")
@@ -58,15 +54,16 @@ class MyClass(val a: Int){
     10
   }
 
-  def basics() : Int = { //optional return type
+  def basics() = { //optional return type in most cases
     val a = 1; // semicolons are optional
     val b : Int = 2  // val declares an immutable reference
-    var c : Int = 3  // var declare a mutable reference
+    var c : Int = 3  // var declares a mutable reference
 
     val peopleAges : scala.collection.mutable.Map[String, Int] = scala.collection.mutable.Map()
-    // all collections in the scala std library have a mutable and immutable type of the same name except list for more http://docs.scala-lang.org/overviews/collections/concrete-mutable-collection-classes.html
+    // all collections in the scala std library have a mutable and immutable type of the same name except list for
+    //    more http://docs.scala-lang.org/overviews/collections/concrete-mutable-collection-classes.html
     peopleAges.put("Rob", 26)
-    peopleAges("Lily") = 25
+    peopleAges("Jake") = 25
     peopleAges += "John" -> 30
 
     println(peopleAges) // no System.out.println or import due to scala predef. For more http://www.scala-lang.org/api/2.10.3/index.html#scala.Predef

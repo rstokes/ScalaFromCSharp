@@ -21,12 +21,13 @@ trait Car {
   val brand: String
 }
 
-trait Shiny {
+trait Shiny extends  Car{
   val shineRefraction: Int
 
   def isWaxed() : Boolean = {
-    if(shineRefraction > 0)
+    if(shineRefraction > 0) {
       true
+    }
     false
   }
 }

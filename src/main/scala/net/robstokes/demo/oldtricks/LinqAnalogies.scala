@@ -51,7 +51,7 @@ class LinqAnalogies {
     xs.sortBy(- _)                                    //xs.OrderByDescending(f)
     xs.sortBy(- _)(Ordering[Int].reverse)             //xs.OrderByDescending(f, comp)
 
-    (xs, ys).zipped.map((x,y) => x + y )              //xs.Zip(ys, (x,y) => x + y)
+    (xs, ys).zipped.map((x : Int,y: Int) => x + y )              //xs.Zip(ys).Select()
 
     xs.select(x => x + 2)                             //magic
 
