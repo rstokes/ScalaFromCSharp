@@ -1,9 +1,12 @@
 //syllabus
+import net.robstokes.demo.oldtricks.Tuples
 import net.robstokes.demo.oldtricks.LinqAnalogies
 import net.robstokes.demo.oldtricks.ExtensionMethods
 import net.robstokes.demo.oldtricks.Generics
-import net.robstokes.demo.oldtricks.Tuples
 import net.robstokes.demo.oldtricks.CommonInterfaces
+
+import net.robstokes.demo.newtricks.Traits
+
 //unit tests
 
 //references
